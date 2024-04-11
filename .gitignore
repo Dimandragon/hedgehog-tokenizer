@@ -1,0 +1,9 @@
+# Xmake cache
+.xmake/
+build/
+.idea
+linux_x86_64/__pycache__
+# MacOS Cache
+.DS_Store
+
+

@@ -1,0 +1,4 @@
+[submodule "non-parametric-dsp"]
+	path = non-parametric-dsp
+	url = https://github.com/Dimandragon/non-parametric-dsp
+	branch = for_linkage
