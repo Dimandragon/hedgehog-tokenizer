@@ -35,7 +35,8 @@ for i in range(extractor.getModesCount()):
     # v = extractor.getInstAmpl(i)
     # v = extractor.getPhase(i)
     ploting_data = []
-    for j in range(v.size()):
+    #print(v.size())
+    for j in range(len(v)):
         ploting_data.append(v[j])
     plt.plot(x, ploting_data)
     plt.show()
