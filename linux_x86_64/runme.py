@@ -15,6 +15,8 @@ for i in range(len(v)):
     print(v[i])
 
 extractor = extractor.InstFreqNormSincExtractor()
+extractor.locality_coeff = 2.5
+extractor.period_muller = 1.02
 
 extractor.computeVec(data_in=v)
 
@@ -40,3 +42,4 @@ for i in range(extractor.getModesCount()):
         ploting_data.append(v[j])
     plt.plot(x, ploting_data)
     plt.show()
+'''
