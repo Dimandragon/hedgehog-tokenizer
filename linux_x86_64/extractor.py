@@ -223,6 +223,111 @@ class DoubleVector(object):
 
 # Register DoubleVector in _extractor:
 _extractor.DoubleVector_swigregister(DoubleVector)
+class TokensVector(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _extractor.TokensVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _extractor.TokensVector___nonzero__(self)
+
+    def __bool__(self):
+        return _extractor.TokensVector___bool__(self)
+
+    def __len__(self):
+        return _extractor.TokensVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _extractor.TokensVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _extractor.TokensVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _extractor.TokensVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _extractor.TokensVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _extractor.TokensVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _extractor.TokensVector___setitem__(self, *args)
+
+    def pop(self):
+        return _extractor.TokensVector_pop(self)
+
+    def append(self, x):
+        return _extractor.TokensVector_append(self, x)
+
+    def empty(self):
+        return _extractor.TokensVector_empty(self)
+
+    def size(self):
+        return _extractor.TokensVector_size(self)
+
+    def swap(self, v):
+        return _extractor.TokensVector_swap(self, v)
+
+    def begin(self):
+        return _extractor.TokensVector_begin(self)
+
+    def end(self):
+        return _extractor.TokensVector_end(self)
+
+    def rbegin(self):
+        return _extractor.TokensVector_rbegin(self)
+
+    def rend(self):
+        return _extractor.TokensVector_rend(self)
+
+    def clear(self):
+        return _extractor.TokensVector_clear(self)
+
+    def get_allocator(self):
+        return _extractor.TokensVector_get_allocator(self)
+
+    def pop_back(self):
+        return _extractor.TokensVector_pop_back(self)
+
+    def erase(self, *args):
+        return _extractor.TokensVector_erase(self, *args)
+
+    def __init__(self, *args):
+        _extractor.TokensVector_swiginit(self, _extractor.new_TokensVector(*args))
+
+    def push_back(self, x):
+        return _extractor.TokensVector_push_back(self, x)
+
+    def front(self):
+        return _extractor.TokensVector_front(self)
+
+    def back(self):
+        return _extractor.TokensVector_back(self)
+
+    def assign(self, n, x):
+        return _extractor.TokensVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _extractor.TokensVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _extractor.TokensVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _extractor.TokensVector_reserve(self, n)
+
+    def capacity(self):
+        return _extractor.TokensVector_capacity(self)
+    __swig_destroy__ = _extractor.delete_TokensVector
+
+# Register TokensVector in _extractor:
+_extractor.TokensVector_swigregister(TokensVector)
 class InstFreqNormSincExtractor(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
@@ -274,4 +379,56 @@ class InstFreqNormSincExtractor(object):
 
 # Register InstFreqNormSincExtractor in _extractor:
 _extractor.InstFreqNormSincExtractor_swigregister(InstFreqNormSincExtractor)
+class Token(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    t = property(_extractor.Token_t_get, _extractor.Token_t_set)
+    mode_num = property(_extractor.Token_mode_num_get, _extractor.Token_mode_num_set)
+    val = property(_extractor.Token_val_get, _extractor.Token_val_set)
+    inst_freq = property(_extractor.Token_inst_freq_get, _extractor.Token_inst_freq_set)
+    inst_ampl = property(_extractor.Token_inst_ampl_get, _extractor.Token_inst_ampl_set)
+    phase = property(_extractor.Token_phase_get, _extractor.Token_phase_set)
+
+    def __init__(self):
+        _extractor.Token_swiginit(self, _extractor.new_Token())
+    __swig_destroy__ = _extractor.delete_Token
+
+# Register Token in _extractor:
+_extractor.Token_swigregister(Token)
+class InstFreqNormSincTokenizer(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+    data = property(_extractor.InstFreqNormSincTokenizer_data_get, _extractor.InstFreqNormSincTokenizer_data_set)
+    data_buffer = property(_extractor.InstFreqNormSincTokenizer_data_buffer_get, _extractor.InstFreqNormSincTokenizer_data_buffer_set)
+    compute_buffer = property(_extractor.InstFreqNormSincTokenizer_compute_buffer_get, _extractor.InstFreqNormSincTokenizer_compute_buffer_set)
+    compute_buffer2 = property(_extractor.InstFreqNormSincTokenizer_compute_buffer2_get, _extractor.InstFreqNormSincTokenizer_compute_buffer2_set)
+    mode = property(_extractor.InstFreqNormSincTokenizer_mode_get, _extractor.InstFreqNormSincTokenizer_mode_set)
+    inst_freq = property(_extractor.InstFreqNormSincTokenizer_inst_freq_get, _extractor.InstFreqNormSincTokenizer_inst_freq_set)
+    inst_ampl = property(_extractor.InstFreqNormSincTokenizer_inst_ampl_get, _extractor.InstFreqNormSincTokenizer_inst_ampl_set)
+    phase = property(_extractor.InstFreqNormSincTokenizer_phase_get, _extractor.InstFreqNormSincTokenizer_phase_set)
+    modes_count = property(_extractor.InstFreqNormSincTokenizer_modes_count_get, _extractor.InstFreqNormSincTokenizer_modes_count_set)
+    freq_conv = property(_extractor.InstFreqNormSincTokenizer_freq_conv_get, _extractor.InstFreqNormSincTokenizer_freq_conv_set)
+    freq_conv_image = property(_extractor.InstFreqNormSincTokenizer_freq_conv_image_get, _extractor.InstFreqNormSincTokenizer_freq_conv_image_set)
+    tokens = property(_extractor.InstFreqNormSincTokenizer_tokens_get, _extractor.InstFreqNormSincTokenizer_tokens_set)
+    period_muller = property(_extractor.InstFreqNormSincTokenizer_period_muller_get, _extractor.InstFreqNormSincTokenizer_period_muller_set)
+    locality_coeff = property(_extractor.InstFreqNormSincTokenizer_locality_coeff_get, _extractor.InstFreqNormSincTokenizer_locality_coeff_set)
+    integrator = property(_extractor.InstFreqNormSincTokenizer_integrator_get, _extractor.InstFreqNormSincTokenizer_integrator_set)
+    derivator = property(_extractor.InstFreqNormSincTokenizer_derivator_get, _extractor.InstFreqNormSincTokenizer_derivator_set)
+    phase_computer_simple = property(_extractor.InstFreqNormSincTokenizer_phase_computer_simple_get, _extractor.InstFreqNormSincTokenizer_phase_computer_simple_set)
+    inst_freq_computer = property(_extractor.InstFreqNormSincTokenizer_inst_freq_computer_get, _extractor.InstFreqNormSincTokenizer_inst_freq_computer_set)
+    inst_ampl_computer = property(_extractor.InstFreqNormSincTokenizer_inst_ampl_computer_get, _extractor.InstFreqNormSincTokenizer_inst_ampl_computer_set)
+    filter = property(_extractor.InstFreqNormSincTokenizer_filter_get, _extractor.InstFreqNormSincTokenizer_filter_set)
+
+    def getTokens(self):
+        return _extractor.InstFreqNormSincTokenizer_getTokens(self)
+
+    def computeVec(self, data_in):
+        return _extractor.InstFreqNormSincTokenizer_computeVec(self, data_in)
+
+    def __init__(self):
+        _extractor.InstFreqNormSincTokenizer_swiginit(self, _extractor.new_InstFreqNormSincTokenizer())
+    __swig_destroy__ = _extractor.delete_InstFreqNormSincTokenizer
+
+# Register InstFreqNormSincTokenizer in _extractor:
+_extractor.InstFreqNormSincTokenizer_swigregister(InstFreqNormSincTokenizer)
 

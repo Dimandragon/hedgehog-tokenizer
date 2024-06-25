@@ -14,7 +14,6 @@ using namespace NP_DSP::ONE_D::Tokenizers;
 
 namespace std {
     %template(DoubleVector) vector<double>;
-    %template(TokensVector) vector<Token>;
 }
 
 //%feature("valuewrapper") Foo;

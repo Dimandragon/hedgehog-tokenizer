@@ -14,31 +14,48 @@ for i in range(len(v)):
 for i in range(len(v)):
     print(v[i])
 
-extractor = extractor.InstFreqNormSincExtractor()
-extractor.locality_coeff = 2.5
-extractor.period_muller = 1.02
+my_extractor = extractor.InstFreqNormSincExtractor()
+my_extractor.locality_coeff = 2.5
+my_extractor.period_muller = 1.02
 
-extractor.computeVec(data_in=v)
+my_extractor.computeVec(data_in=v)
 
-print(extractor.getDataSize(), extractor.getModesCount())
+print(my_extractor.getDataSize(), my_extractor.getModesCount())
 
-x = np.linspace(0, extractor.getDataSize()-1,extractor.getDataSize())
+x = np.linspace(0, my_extractor.getDataSize()-1,my_extractor.getDataSize())
 print(x.shape)
 ploting_data = []
 for i in range(500):
     ploting_data.append(v[i])
 plt.plot(x, ploting_data)
-plt.show()
+#plt.show()
 
 
-for i in range(extractor.getModesCount()):
-    v = extractor.getMode(i)
-    # v = extractor.getInstFreq(i)
-    # v = extractor.getInstAmpl(i)
-    # v = extractor.getPhase(i)
+for i in range(my_extractor.getModesCount()):
+    v = my_extractor.getMode(i)
+    # v = my_extractor.getInstFreq(i)
+    # v = my_extractor.getInstAmpl(i)
+    # v = my_extractor.getPhase(i)
     ploting_data = []
     #print(v.size())
     for j in range(len(v)):
         ploting_data.append(v[j])
     plt.plot(x, ploting_data)
-    plt.show()
+    #plt.show()
+
+tokenizer = extractor.InstFreqNormSincTokenizer()
+tokenizer.locality_coeff = 2.5
+tokenizer.period_muller = 1.02
+
+v = extractor.DoubleVector(size)
+for i in range(len(v)):
+    v[i] = random.random()
+
+tokenizer.computeVec(v)
+
+tokens = tokenizer.getTokens()
+for token in tokens:
+    print(token.mode_num, token.t, token.val, 
+          token.inst_freq, token.inst_ampl, token.phase)
+    
+

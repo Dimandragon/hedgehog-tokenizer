@@ -3160,21 +3160,25 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t swig_types[6]
 #define SWIGTYPE_p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t swig_types[7]
 #define SWIGTYPE_p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor swig_types[8]
-#define SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t swig_types[9]
-#define SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t swig_types[10]
-#define SWIGTYPE_p_allocator_type swig_types[11]
-#define SWIGTYPE_p_char swig_types[12]
-#define SWIGTYPE_p_difference_type swig_types[13]
-#define SWIGTYPE_p_p_PyObject swig_types[14]
-#define SWIGTYPE_p_size_type swig_types[15]
-#define SWIGTYPE_p_std__allocatorT_double_t swig_types[16]
-#define SWIGTYPE_p_std__invalid_argument swig_types[17]
-#define SWIGTYPE_p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_double_t swig_types[19]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[20]
-#define SWIGTYPE_p_value_type swig_types[21]
-static swig_type_info *swig_types[23];
-static swig_module_info swig_module = {swig_types, 22, 0, 0, 0, 0};
+#define SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer swig_types[9]
+#define SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t swig_types[10]
+#define SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t swig_types[11]
+#define SWIGTYPE_p_Token swig_types[12]
+#define SWIGTYPE_p_allocator_type swig_types[13]
+#define SWIGTYPE_p_char swig_types[14]
+#define SWIGTYPE_p_difference_type swig_types[15]
+#define SWIGTYPE_p_p_PyObject swig_types[16]
+#define SWIGTYPE_p_size_type swig_types[17]
+#define SWIGTYPE_p_std__allocatorT_Token_t swig_types[18]
+#define SWIGTYPE_p_std__allocatorT_double_t swig_types[19]
+#define SWIGTYPE_p_std__invalid_argument swig_types[20]
+#define SWIGTYPE_p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t swig_types[21]
+#define SWIGTYPE_p_std__vectorT_Token_t swig_types[22]
+#define SWIGTYPE_p_std__vectorT_double_t swig_types[23]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[24]
+#define SWIGTYPE_p_value_type swig_types[25]
+static swig_type_info *swig_types[27];
+static swig_module_info swig_module = {swig_types, 26, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3323,9 +3327,11 @@ namespace swig {
 
 
 #include "modes_extractors.hpp"
+#include "tokenizer.hpp"
 using namespace NP_DSP;
 using namespace NP_DSP::ONE_D;
 using namespace NP_DSP::ONE_D::MODES_EXTRACTORS;
+using namespace NP_DSP::ONE_D::Tokenizers;
 
 
 #include <typeinfo>
@@ -5031,6 +5037,115 @@ SWIGINTERN std::vector< double >::iterator std_vector_Sl_double_Sg__erase__SWIG_
 SWIGINTERN std::vector< double >::iterator std_vector_Sl_double_Sg__erase__SWIG_1(std::vector< double > *self,std::vector< double >::iterator first,std::vector< double >::iterator last){ return self->erase(first, last); }
 SWIGINTERN std::vector< double >::iterator std_vector_Sl_double_Sg__insert__SWIG_0(std::vector< double > *self,std::vector< double >::iterator pos,std::vector< double >::value_type const &x){ return self->insert(pos, x); }
 SWIGINTERN void std_vector_Sl_double_Sg__insert__SWIG_1(std::vector< double > *self,std::vector< double >::iterator pos,std::vector< double >::size_type n,std::vector< double >::value_type const &x){ self->insert(pos, n, x); }
+
+  namespace swig {
+    template <>  struct traits< Token > {
+      typedef pointer_category category;
+      static const char* type_name() { return"Token"; }
+    };
+  }
+
+
+      namespace swig {
+	template <>  struct traits<std::vector< Token, std::allocator< Token > > > {
+	  typedef pointer_category category;
+	  static const char* type_name() {
+	    return "std::vector<" "Token" "," "std::allocator< Token >" " >";
+	  }
+	};
+      }
+    
+SWIGINTERN swig::SwigPyIterator *std_vector_Sl_Token_Sg__iterator(std::vector< Token > *self,PyObject **PYTHON_SELF){
+      return swig::make_output_iterator(self->begin(), self->begin(), self->end(), *PYTHON_SELF);
+    }
+SWIGINTERN bool std_vector_Sl_Token_Sg____nonzero__(std::vector< Token > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN bool std_vector_Sl_Token_Sg____bool__(std::vector< Token > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN std::vector< Token >::size_type std_vector_Sl_Token_Sg____len__(std::vector< Token > const *self){
+      return self->size();
+    }
+SWIGINTERN std::vector< Token,std::allocator< Token > > *std_vector_Sl_Token_Sg____getslice__(std::vector< Token > *self,std::vector< Token >::difference_type i,std::vector< Token >::difference_type j){
+      return swig::getslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____setslice____SWIG_0(std::vector< Token > *self,std::vector< Token >::difference_type i,std::vector< Token >::difference_type j){
+      swig::setslice(self, i, j, 1, std::vector< Token,std::allocator< Token > >());
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____setslice____SWIG_1(std::vector< Token > *self,std::vector< Token >::difference_type i,std::vector< Token >::difference_type j,std::vector< Token,std::allocator< Token > > const &v){
+      swig::setslice(self, i, j, 1, v);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____delslice__(std::vector< Token > *self,std::vector< Token >::difference_type i,std::vector< Token >::difference_type j){
+      swig::delslice(self, i, j, 1);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____delitem____SWIG_0(std::vector< Token > *self,std::vector< Token >::difference_type i){
+      swig::erase(self, swig::getpos(self, i));
+    }
+SWIGINTERN std::vector< Token,std::allocator< Token > > *std_vector_Sl_Token_Sg____getitem____SWIG_0(std::vector< Token > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return NULL;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector< Token,std::allocator< Token > >::difference_type id = i;
+      std::vector< Token,std::allocator< Token > >::difference_type jd = j;
+      return swig::getslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____setitem____SWIG_0(std::vector< Token > *self,PySliceObject *slice,std::vector< Token,std::allocator< Token > > const &v){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector< Token,std::allocator< Token > >::difference_type id = i;
+      std::vector< Token,std::allocator< Token > >::difference_type jd = j;
+      swig::setslice(self, id, jd, step, v);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____setitem____SWIG_1(std::vector< Token > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector< Token,std::allocator< Token > >::difference_type id = i;
+      std::vector< Token,std::allocator< Token > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____delitem____SWIG_1(std::vector< Token > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(SWIGPY_SLICE_ARG(slice), (Py_ssize_t)self->size(), &i, &j, &step);
+      std::vector< Token,std::allocator< Token > >::difference_type id = i;
+      std::vector< Token,std::allocator< Token > >::difference_type jd = j;
+      swig::delslice(self, id, jd, step);
+    }
+SWIGINTERN std::vector< Token >::value_type const &std_vector_Sl_Token_Sg____getitem____SWIG_1(std::vector< Token > const *self,std::vector< Token >::difference_type i){
+      return *(swig::cgetpos(self, i));
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg____setitem____SWIG_2(std::vector< Token > *self,std::vector< Token >::difference_type i,std::vector< Token >::value_type const &x){
+      *(swig::getpos(self,i)) = x;
+    }
+SWIGINTERN std::vector< Token >::value_type std_vector_Sl_Token_Sg__pop(std::vector< Token > *self){
+      if (self->size() == 0)
+	throw std::out_of_range("pop from empty container");
+      std::vector< Token,std::allocator< Token > >::value_type x = self->back();
+      self->pop_back();
+      return x;
+    }
+SWIGINTERN void std_vector_Sl_Token_Sg__append(std::vector< Token > *self,std::vector< Token >::value_type const &x){
+      self->push_back(x);
+    }
+SWIGINTERN std::vector< Token >::iterator std_vector_Sl_Token_Sg__erase__SWIG_0(std::vector< Token > *self,std::vector< Token >::iterator pos){ return self->erase(pos); }
+SWIGINTERN std::vector< Token >::iterator std_vector_Sl_Token_Sg__erase__SWIG_1(std::vector< Token > *self,std::vector< Token >::iterator first,std::vector< Token >::iterator last){ return self->erase(first, last); }
+SWIGINTERN std::vector< Token >::iterator std_vector_Sl_Token_Sg__insert__SWIG_0(std::vector< Token > *self,std::vector< Token >::iterator pos,std::vector< Token >::value_type const &x){ return self->insert(pos, x); }
+SWIGINTERN void std_vector_Sl_Token_Sg__insert__SWIG_1(std::vector< Token > *self,std::vector< Token >::iterator pos,std::vector< Token >::size_type n,std::vector< Token >::value_type const &x){ self->insert(pos, n, x); }
 
 SWIGINTERNINLINE PyObject*
   SWIG_From_int  (int value)
@@ -7766,6 +7881,1872 @@ SWIGINTERN PyObject *DoubleVector_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObj
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_TokensVector_iterator(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  PyObject **arg2 = (PyObject **) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  swig::SwigPyIterator *result = 0 ;
+  
+  arg2 = &swig_obj[0];
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_iterator" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (swig::SwigPyIterator *)std_vector_Sl_Token_Sg__iterator(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___nonzero__(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___nonzero__" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (bool)std_vector_Sl_Token_Sg____nonzero__((std::vector< Token > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___bool__(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___bool__" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (bool)std_vector_Sl_Token_Sg____bool__((std::vector< Token > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___len__(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::size_type result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___len__" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = std_vector_Sl_Token_Sg____len__((std::vector< Token > const *)arg1);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___getslice__(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  std::vector< Token >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  std::vector< Token,std::allocator< Token > > *result = 0 ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector___getslice__", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___getslice__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___getslice__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TokensVector___getslice__" "', argument " "3"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< Token >::difference_type >(val3);
+  try {
+    result = (std::vector< Token,std::allocator< Token > > *)std_vector_Sl_Token_Sg____getslice__(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3));
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setslice____SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  std::vector< Token >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___setslice__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___setslice__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TokensVector___setslice__" "', argument " "3"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< Token >::difference_type >(val3);
+  try {
+    std_vector_Sl_Token_Sg____setslice____SWIG_0(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3));
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setslice____SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  std::vector< Token >::difference_type arg3 ;
+  std::vector< Token,std::allocator< Token > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  int res4 = SWIG_OLDOBJ ;
+  
+  (void)self;
+  if ((nobjs < 4) || (nobjs > 4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___setslice__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___setslice__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TokensVector___setslice__" "', argument " "3"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< Token >::difference_type >(val3);
+  {
+    std::vector< Token,std::allocator< Token > > *ptr = (std::vector< Token,std::allocator< Token > > *)0;
+    res4 = swig::asptr(swig_obj[3], &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TokensVector___setslice__" "', argument " "4"" of type '" "std::vector< Token,std::allocator< Token > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector___setslice__" "', argument " "4"" of type '" "std::vector< Token,std::allocator< Token > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  try {
+    std_vector_Sl_Token_Sg____setslice____SWIG_1(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3),(std::vector< Token,std::allocator< Token > > const &)*arg4);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setslice__(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[5] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector___setslice__", 0, 4, argv))) SWIG_fail;
+  --argc;
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_TokensVector___setslice____SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_ptrdiff_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = swig::asptr(argv[3], (std::vector< Token,std::allocator< Token > >**)(0));
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TokensVector___setslice____SWIG_1(self, argc, argv);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector___setslice__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::__setslice__(std::vector< Token >::difference_type,std::vector< Token >::difference_type)\n"
+    "    std::vector< Token >::__setslice__(std::vector< Token >::difference_type,std::vector< Token >::difference_type,std::vector< Token,std::allocator< Token > > const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___delslice__(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  std::vector< Token >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector___delslice__", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___delslice__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___delslice__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TokensVector___delslice__" "', argument " "3"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< Token >::difference_type >(val3);
+  try {
+    std_vector_Sl_Token_Sg____delslice__(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3));
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___delitem____SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___delitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___delitem__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  try {
+    std_vector_Sl_Token_Sg____delitem____SWIG_0(arg1,SWIG_STD_MOVE(arg2));
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___getitem____SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::vector< Token,std::allocator< Token > > *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___getitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  {
+    if (!PySlice_Check(swig_obj[1])) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector___getitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) swig_obj[1];
+  }
+  try {
+    result = (std::vector< Token,std::allocator< Token > > *)std_vector_Sl_Token_Sg____getitem____SWIG_0(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setitem____SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  std::vector< Token,std::allocator< Token > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___setitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  {
+    if (!PySlice_Check(swig_obj[1])) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) swig_obj[1];
+  }
+  {
+    std::vector< Token,std::allocator< Token > > *ptr = (std::vector< Token,std::allocator< Token > > *)0;
+    res3 = swig::asptr(swig_obj[2], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TokensVector___setitem__" "', argument " "3"" of type '" "std::vector< Token,std::allocator< Token > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector___setitem__" "', argument " "3"" of type '" "std::vector< Token,std::allocator< Token > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  try {
+    std_vector_Sl_Token_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< Token,std::allocator< Token > > const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setitem____SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___setitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  {
+    if (!PySlice_Check(swig_obj[1])) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector___setitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) swig_obj[1];
+  }
+  try {
+    std_vector_Sl_Token_Sg____setitem____SWIG_1(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___delitem____SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___delitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  {
+    if (!PySlice_Check(swig_obj[1])) {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector___delitem__" "', argument " "2"" of type '" "PySliceObject *""'");
+    }
+    arg2 = (PySliceObject *) swig_obj[1];
+  }
+  try {
+    std_vector_Sl_Token_Sg____delitem____SWIG_1(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  } catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___delitem__(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector___delitem__", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TokensVector___delitem____SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TokensVector___delitem____SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector___delitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::__delitem__(std::vector< Token >::difference_type)\n"
+    "    std::vector< Token >::__delitem__(PySliceObject *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___getitem____SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  std::vector< Token >::value_type *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___getitem__" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___getitem__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  try {
+    result = (std::vector< Token >::value_type *) &std_vector_Sl_Token_Sg____getitem____SWIG_1((std::vector< Token > const *)arg1,SWIG_STD_MOVE(arg2));
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Token, 0 |  0 );
+  (void)swig::container_owner<swig::traits<std::vector< Token >::value_type>::category>::back_reference(resultobj, swig_obj[0]);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___getitem__(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector___getitem__", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TokensVector___getitem____SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TokensVector___getitem____SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector___getitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::__getitem__(PySliceObject *)\n"
+    "    std::vector< Token >::__getitem__(std::vector< Token >::difference_type) const\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setitem____SWIG_2(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::difference_type arg2 ;
+  std::vector< Token >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector___setitem__" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector___setitem__" "', argument " "2"" of type '" "std::vector< Token >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::difference_type >(val2);
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TokensVector___setitem__" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector___setitem__" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< Token >::value_type * >(argp3);
+  try {
+    std_vector_Sl_Token_Sg____setitem____SWIG_2(arg1,SWIG_STD_MOVE(arg2),(Token const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector___setitem__(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector___setitem__", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_TokensVector___setitem____SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        int res = swig::asptr(argv[2], (std::vector< Token,std::allocator< Token > >**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TokensVector___setitem____SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_Token, SWIG_POINTER_NO_NULL | 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TokensVector___setitem____SWIG_2(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector___setitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::__setitem__(PySliceObject *,std::vector< Token,std::allocator< Token > > const &)\n"
+    "    std::vector< Token >::__setitem__(PySliceObject *)\n"
+    "    std::vector< Token >::__setitem__(std::vector< Token >::difference_type,std::vector< Token >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_pop(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::value_type result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_pop" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  try {
+    result = std_vector_Sl_Token_Sg__pop(arg1);
+  } catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  resultobj = SWIG_NewPointerObj((new std::vector< Token >::value_type(result)), SWIGTYPE_p_Token, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_append(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector_append", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_append" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TokensVector_append" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_append" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< Token >::value_type * >(argp2);
+  std_vector_Sl_Token_Sg__append(arg1,(Token const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TokensVector__SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **SWIGUNUSEDPARM(swig_obj)) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 0) || (nobjs > 0)) SWIG_fail;
+  result = (std::vector< Token > *)new std::vector< Token >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TokensVector__SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  std::vector< Token > *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  {
+    std::vector< Token,std::allocator< Token > > *ptr = (std::vector< Token,std::allocator< Token > > *)0;
+    res1 = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TokensVector" "', argument " "1"" of type '" "std::vector< Token > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TokensVector" "', argument " "1"" of type '" "std::vector< Token > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (std::vector< Token > *)new std::vector< Token >((std::vector< Token > const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_empty(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  bool result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_empty" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (bool)((std::vector< Token > const *)arg1)->empty();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_size(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::size_type result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_size" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = ((std::vector< Token > const *)arg1)->size();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_swap(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector_swap", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_swap" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_std__vectorT_Token_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TokensVector_swap" "', argument " "2"" of type '" "std::vector< Token > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_swap" "', argument " "2"" of type '" "std::vector< Token > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< Token > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_begin(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::iterator result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_begin" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (arg1)->begin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_end(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::iterator result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_end" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (arg1)->end();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_rbegin(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::reverse_iterator result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_rbegin" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (arg1)->rbegin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_rend(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::reverse_iterator result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_rend" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (arg1)->rend();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_clear(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_clear" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  (arg1)->clear();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_get_allocator(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  SwigValueWrapper< std::allocator< Token > > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_get_allocator" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = ((std::vector< Token > const *)arg1)->get_allocator();
+  resultobj = SWIG_NewPointerObj((new std::vector< Token >::allocator_type(result)), SWIGTYPE_p_std__allocatorT_Token_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TokensVector__SWIG_2(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token >::size_type arg1 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  std::vector< Token > *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(swig_obj[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TokensVector" "', argument " "1"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< Token >::size_type >(val1);
+  result = (std::vector< Token > *)new std::vector< Token >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_pop_back(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_pop_back" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  (arg1)->pop_back();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_resize__SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_resize" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector_resize" "', argument " "2"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::size_type >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_erase__SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::iterator arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  std::vector< Token >::iterator result;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_erase" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< Token >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_Token_Sg__erase__SWIG_0(arg1,SWIG_STD_MOVE(arg2));
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_erase__SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::iterator arg2 ;
+  std::vector< Token >::iterator arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  swig::SwigPyIterator *iter3 = 0 ;
+  int res3 ;
+  std::vector< Token >::iterator result;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_erase" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< Token >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(swig_obj[2], SWIG_as_voidptrptr(&iter3), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res3) || !iter3) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "3"" of type '" "std::vector< Token >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< Token >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter3);
+    if (iter_t) {
+      arg3 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_erase" "', argument " "3"" of type '" "std::vector< Token >::iterator""'");
+    }
+  }
+  result = std_vector_Sl_Token_Sg__erase__SWIG_1(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3));
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_erase(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector_erase", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter) != 0));
+      if (_v) {
+        return _wrap_TokensVector_erase__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter) != 0));
+      if (_v) {
+        swig::SwigPyIterator *iter = 0;
+        int res = SWIG_ConvertPtr(argv[2], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+        _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter) != 0));
+        if (_v) {
+          return _wrap_TokensVector_erase__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector_erase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::erase(std::vector< Token >::iterator)\n"
+    "    std::vector< Token >::erase(std::vector< Token >::iterator,std::vector< Token >::iterator)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TokensVector__SWIG_3(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token >::size_type arg1 ;
+  std::vector< Token >::value_type *arg2 = 0 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  std::vector< Token > *result = 0 ;
+  
+  (void)self;
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(swig_obj[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_TokensVector" "', argument " "1"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< Token >::size_type >(val1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_TokensVector" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TokensVector" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< Token >::value_type * >(argp2);
+  result = (std::vector< Token > *)new std::vector< Token >(arg1,(std::vector< Token >::value_type const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TokensVector(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "new_TokensVector", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 0) {
+    return _wrap_new_TokensVector__SWIG_0(self, argc, argv);
+  }
+  if (argc == 1) {
+    int _v = 0;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_TokensVector__SWIG_2(self, argc, argv);
+    }
+  }
+  if (argc == 1) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_TokensVector__SWIG_1(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v = 0;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_Token, SWIG_POINTER_NO_NULL | 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_TokensVector__SWIG_3(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'new_TokensVector'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::vector()\n"
+    "    std::vector< Token >::vector(std::vector< Token > const &)\n"
+    "    std::vector< Token >::vector(std::vector< Token >::size_type)\n"
+    "    std::vector< Token >::vector(std::vector< Token >::size_type,std::vector< Token >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_push_back(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector_push_back", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_push_back" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TokensVector_push_back" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_push_back" "', argument " "2"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< Token >::value_type * >(argp2);
+  (arg1)->push_back((std::vector< Token >::value_type const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_front(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::value_type *result = 0 ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_front" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (std::vector< Token >::value_type *) &((std::vector< Token > const *)arg1)->front();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Token, 0 |  0 );
+  (void)swig::container_owner<swig::traits<std::vector< Token >::value_type>::category>::back_reference(resultobj, swig_obj[0]);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_back(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::value_type *result = 0 ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_back" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = (std::vector< Token >::value_type *) &((std::vector< Token > const *)arg1)->back();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Token, 0 |  0 );
+  (void)swig::container_owner<swig::traits<std::vector< Token >::value_type>::category>::back_reference(resultobj, swig_obj[0]);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_assign(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::size_type arg2 ;
+  std::vector< Token >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector_assign", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_assign" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector_assign" "', argument " "2"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TokensVector_assign" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_assign" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< Token >::value_type * >(argp3);
+  (arg1)->assign(arg2,(std::vector< Token >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_resize__SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::size_type arg2 ;
+  std::vector< Token >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_resize" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector_resize" "', argument " "2"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TokensVector_resize" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_resize" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< Token >::value_type * >(argp3);
+  (arg1)->resize(arg2,(std::vector< Token >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_resize(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector_resize", 0, 3, argv))) SWIG_fail;
+  --argc;
+  if (argc == 2) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_TokensVector_resize__SWIG_0(self, argc, argv);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_Token, SWIG_POINTER_NO_NULL | 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TokensVector_resize__SWIG_1(self, argc, argv);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector_resize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::resize(std::vector< Token >::size_type)\n"
+    "    std::vector< Token >::resize(std::vector< Token >::size_type,std::vector< Token >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_insert__SWIG_0(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::iterator arg2 ;
+  std::vector< Token >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  std::vector< Token >::iterator result;
+  
+  (void)self;
+  if ((nobjs < 3) || (nobjs > 3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_insert" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_insert" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< Token >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_insert" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(swig_obj[2], &argp3, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TokensVector_insert" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_insert" "', argument " "3"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< Token >::value_type * >(argp3);
+  result = std_vector_Sl_Token_Sg__insert__SWIG_0(arg1,SWIG_STD_MOVE(arg2),(Token const &)*arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< Token >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_insert__SWIG_1(PyObject *self, Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::iterator arg2 ;
+  std::vector< Token >::size_type arg3 ;
+  std::vector< Token >::value_type *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  size_t val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  (void)self;
+  if ((nobjs < 4) || (nobjs > 4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_insert" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_insert" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< Token >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "TokensVector_insert" "', argument " "2"" of type '" "std::vector< Token >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_size_t(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TokensVector_insert" "', argument " "3"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg3 = static_cast< std::vector< Token >::size_type >(val3);
+  res4 = SWIG_ConvertPtr(swig_obj[3], &argp4, SWIGTYPE_p_Token,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "TokensVector_insert" "', argument " "4"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TokensVector_insert" "', argument " "4"" of type '" "std::vector< Token >::value_type const &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< Token >::value_type * >(argp4);
+  std_vector_Sl_Token_Sg__insert__SWIG_1(arg1,SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3),(Token const &)*arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_insert(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[5] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "TokensVector_insert", 0, 4, argv))) SWIG_fail;
+  --argc;
+  if (argc == 3) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter) != 0));
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_Token, SWIG_POINTER_NO_NULL | 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_TokensVector_insert__SWIG_0(self, argc, argv);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v = 0;
+    int res = swig::asptr(argv[0], (std::vector< Token,std::allocator< Token > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< Token >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_size_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_Token, SWIG_POINTER_NO_NULL | 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_TokensVector_insert__SWIG_1(self, argc, argv);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'TokensVector_insert'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< Token >::insert(std::vector< Token >::iterator,std::vector< Token >::value_type const &)\n"
+    "    std::vector< Token >::insert(std::vector< Token >::iterator,std::vector< Token >::size_type,std::vector< Token >::value_type const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_reserve(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  std::vector< Token >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "TokensVector_reserve", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_reserve" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TokensVector_reserve" "', argument " "2"" of type '" "std::vector< Token >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< Token >::size_type >(val2);
+  (arg1)->reserve(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TokensVector_capacity(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token >::size_type result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TokensVector_capacity" "', argument " "1"" of type '" "std::vector< Token > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  result = ((std::vector< Token > const *)arg1)->capacity();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TokensVector(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< Token > *arg1 = (std::vector< Token > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_std__vectorT_Token_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TokensVector" "', argument " "1"" of type '" "std::vector< Token > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< Token > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TokensVector_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_Token_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *TokensVector_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
 SWIGINTERN PyObject *_wrap_InstFreqNormSincExtractor_data_set(PyObject *self, PyObject *args) {
   PyObject *resultobj = 0;
   NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor *arg1 = (NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor *) 0 ;
@@ -9199,6 +11180,1679 @@ SWIGINTERN PyObject *InstFreqNormSincExtractor_swiginit(PyObject *SWIGUNUSEDPARM
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_Token_t_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  size_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_t_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_t_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_t_set" "', argument " "2"" of type '" "size_t""'");
+  } 
+  arg2 = static_cast< size_t >(val2);
+  if (arg1) (arg1)->t = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_t_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  size_t result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_t_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result =  ((arg1)->t);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_mode_num_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  size_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_mode_num_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_mode_num_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_mode_num_set" "', argument " "2"" of type '" "size_t""'");
+  } 
+  arg2 = static_cast< size_t >(val2);
+  if (arg1) (arg1)->mode_num = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_mode_num_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  size_t result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_mode_num_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result =  ((arg1)->mode_num);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_val_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_val_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_val_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_val_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->val = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_val_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_val_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result = (double) ((arg1)->val);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_inst_freq_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_inst_freq_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_inst_freq_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_inst_freq_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->inst_freq = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_inst_freq_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_inst_freq_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result = (double) ((arg1)->inst_freq);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_inst_ampl_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_inst_ampl_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_inst_ampl_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_inst_ampl_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->inst_ampl = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_inst_ampl_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_inst_ampl_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result = (double) ((arg1)->inst_ampl);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_phase_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "Token_phase_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_phase_set" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Token_phase_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->phase = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Token_phase_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Token_phase_get" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  result = (double) ((arg1)->phase);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_Token(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *result = 0 ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "new_Token", 0, 0, 0)) SWIG_fail;
+  result = (Token *)new Token();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Token, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Token(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  Token *arg1 = (Token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Token, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Token" "', argument " "1"" of type '" "Token *""'"); 
+  }
+  arg1 = reinterpret_cast< Token * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *Token_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_Token, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *Token_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_data_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_data_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_data_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_data_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_data_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->data = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_data_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_data_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->data);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_data_buffer_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_data_buffer_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_data_buffer_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_data_buffer_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_data_buffer_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->data_buffer = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_data_buffer_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_data_buffer_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->data_buffer);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_compute_buffer_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_compute_buffer_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_compute_buffer_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_compute_buffer_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_compute_buffer_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->compute_buffer = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_compute_buffer_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_compute_buffer_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->compute_buffer);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_compute_buffer2_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_compute_buffer2_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_compute_buffer2_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_compute_buffer2_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_compute_buffer2_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->compute_buffer2 = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_compute_buffer2_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_compute_buffer2_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->compute_buffer2);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_mode_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_mode_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_mode_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_mode_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_mode_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->mode = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_mode_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_mode_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->mode);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_freq_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_inst_freq_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_freq_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_inst_freq_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_inst_freq_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->inst_freq = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_freq_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_freq_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->inst_freq);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_ampl_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_inst_ampl_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_ampl_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_inst_ampl_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_inst_ampl_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->inst_ampl = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_ampl_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_ampl_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->inst_ampl);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_phase_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_phase_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_phase_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_phase_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_phase_set" "', argument " "2"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType""'");
+    } else {
+      NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * temp = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->phase = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_phase_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_phase_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->phase);
+  resultobj = SWIG_NewPointerObj((new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType(result)), SWIGTYPE_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_modes_count_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  size_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_modes_count_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_modes_count_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "InstFreqNormSincTokenizer_modes_count_set" "', argument " "2"" of type '" "size_t""'");
+  } 
+  arg2 = static_cast< size_t >(val2);
+  if (arg1) (arg1)->modes_count = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_modes_count_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  size_t result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_modes_count_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->modes_count);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_freq_conv_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  std::vector< double,std::allocator< double > > *arg2 = (std::vector< double,std::allocator< double > > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_freq_conv_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_freq_conv_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2,SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_freq_conv_set" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< double,std::allocator< double > > * >(argp2);
+  if (arg1) (arg1)->freq_conv = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_freq_conv_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< double,std::allocator< double > > *result = 0 ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_freq_conv_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (std::vector< double,std::allocator< double > > *)& ((arg1)->freq_conv);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_freq_conv_image_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  std::vector< double,std::allocator< double > > *arg2 = (std::vector< double,std::allocator< double > > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_freq_conv_image_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_freq_conv_image_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2,SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_freq_conv_image_set" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< double,std::allocator< double > > * >(argp2);
+  if (arg1) (arg1)->freq_conv_image = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_freq_conv_image_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< double,std::allocator< double > > *result = 0 ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_freq_conv_image_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (std::vector< double,std::allocator< double > > *)& ((arg1)->freq_conv_image);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_double_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_tokens_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  std::vector< Token,std::allocator< Token > > *arg2 = (std::vector< Token,std::allocator< Token > > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_tokens_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_tokens_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2,SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_tokens_set" "', argument " "2"" of type '" "std::vector< Token,std::allocator< Token > > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< Token,std::allocator< Token > > * >(argp2);
+  if (arg1) (arg1)->tokens = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_tokens_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token,std::allocator< Token > > *result = 0 ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_tokens_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (std::vector< Token,std::allocator< Token > > *)& ((arg1)->tokens);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_Token_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_period_muller_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_period_muller_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_period_muller_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "InstFreqNormSincTokenizer_period_muller_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->period_muller = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_period_muller_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_period_muller_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (double) ((arg1)->period_muller);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_locality_coeff_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_locality_coeff_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_locality_coeff_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  ecode2 = SWIG_AsVal_double(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "InstFreqNormSincTokenizer_locality_coeff_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = static_cast< double >(val2);
+  if (arg1) (arg1)->locality_coeff = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_locality_coeff_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  double result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_locality_coeff_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (double) ((arg1)->locality_coeff);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_integrator_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_integrator_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_integrator_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_integrator_set" "', argument " "2"" of type '" "INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_integrator_set" "', argument " "2"" of type '" "INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >""'");
+    } else {
+      INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint > * temp = reinterpret_cast< INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->integrator = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_integrator_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_integrator_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->integrator);
+  resultobj = SWIG_NewPointerObj((new INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >(result)), SWIGTYPE_p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_derivator_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_derivator_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_derivator_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_derivator_set" "', argument " "2"" of type '" "DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_derivator_set" "', argument " "2"" of type '" "DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >""'");
+    } else {
+      DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > * temp = reinterpret_cast< DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->derivator = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_derivator_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_derivator_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->derivator);
+  resultobj = SWIG_NewPointerObj((new DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >(result)), SWIGTYPE_p_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_phase_computer_simple_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_phase_computer_simple_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_phase_computer_simple_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_phase_computer_simple_set" "', argument " "2"" of type '" "PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_phase_computer_simple_set" "', argument " "2"" of type '" "PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > >""'");
+    } else {
+      PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > * temp = reinterpret_cast< PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->phase_computer_simple = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_phase_computer_simple_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_phase_computer_simple_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->phase_computer_simple);
+  resultobj = SWIG_NewPointerObj((new PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > >(result)), SWIGTYPE_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_freq_computer_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_inst_freq_computer_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_freq_computer_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_inst_freq_computer_set" "', argument " "2"" of type '" "INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_inst_freq_computer_set" "', argument " "2"" of type '" "INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage >""'");
+    } else {
+      INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage > * temp = reinterpret_cast< INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->inst_freq_computer = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_freq_computer_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_freq_computer_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->inst_freq_computer);
+  resultobj = SWIG_NewPointerObj((new INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage >(result)), SWIGTYPE_p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_ampl_computer_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_inst_ampl_computer_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_ampl_computer_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_INST_AMPL_COMPUTERS__HilbertTransformBasedT_UTILITY_MATH__HTKind__Mull_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_inst_ampl_computer_set" "', argument " "2"" of type '" "INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_inst_ampl_computer_set" "', argument " "2"" of type '" "INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull >""'");
+    } else {
+      INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull > * temp = reinterpret_cast< INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->inst_ampl_computer = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_inst_ampl_computer_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_inst_ampl_computer_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->inst_ampl_computer);
+  resultobj = SWIG_NewPointerObj((new INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull >(result)), SWIGTYPE_p_INST_AMPL_COMPUTERS__HilbertTransformBasedT_UTILITY_MATH__HTKind__Mull_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_filter_set(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  FILTERS::SincResLocalFilter< double > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_filter_set", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_filter_set" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_FILTERS__SincResLocalFilterT_double_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_filter_set" "', argument " "2"" of type '" "FILTERS::SincResLocalFilter< double >""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_filter_set" "', argument " "2"" of type '" "FILTERS::SincResLocalFilter< double >""'");
+    } else {
+      FILTERS::SincResLocalFilter< double > * temp = reinterpret_cast< FILTERS::SincResLocalFilter< double > * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  if (arg1) (arg1)->filter = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_filter_get(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  FILTERS::SincResLocalFilter< double > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_filter_get" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result =  ((arg1)->filter);
+  resultobj = SWIG_NewPointerObj((new FILTERS::SincResLocalFilter< double >(result)), SWIGTYPE_p_FILTERS__SincResLocalFilterT_double_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_getTokens(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< Token,std::allocator< Token > > result;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_getTokens" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  result = (arg1)->getTokens();
+  resultobj = swig::from(static_cast< std::vector< Token,std::allocator< Token > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InstFreqNormSincTokenizer_computeVec(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  std::vector< double,std::allocator< double > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject *swig_obj[2] ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "InstFreqNormSincTokenizer_computeVec", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InstFreqNormSincTokenizer_computeVec" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res2 = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InstFreqNormSincTokenizer_computeVec" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InstFreqNormSincTokenizer_computeVec" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  (arg1)->SWIGTEMPLATEDISAMBIGUATOR compute< std::vector< double > >((std::vector< double,std::allocator< double > > const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_InstFreqNormSincTokenizer(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *result = 0 ;
+  
+  (void)self;
+  if (!SWIG_Python_UnpackTuple(args, "new_InstFreqNormSincTokenizer", 0, 0, 0)) SWIG_fail;
+  result = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *)new NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_InstFreqNormSincTokenizer(PyObject *self, PyObject *args) {
+  PyObject *resultobj = 0;
+  NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *arg1 = (NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  (void)self;
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_InstFreqNormSincTokenizer" "', argument " "1"" of type '" "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *""'"); 
+  }
+  arg1 = reinterpret_cast< NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *InstFreqNormSincTokenizer_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *InstFreqNormSincTokenizer_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { "delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_O, NULL},
 	 { "SwigPyIterator_value", _wrap_SwigPyIterator_value, METH_O, NULL},
@@ -9253,6 +12907,41 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_DoubleVector", _wrap_delete_DoubleVector, METH_O, NULL},
 	 { "DoubleVector_swigregister", DoubleVector_swigregister, METH_O, NULL},
 	 { "DoubleVector_swiginit", DoubleVector_swiginit, METH_VARARGS, NULL},
+	 { "TokensVector_iterator", _wrap_TokensVector_iterator, METH_O, NULL},
+	 { "TokensVector___nonzero__", _wrap_TokensVector___nonzero__, METH_O, NULL},
+	 { "TokensVector___bool__", _wrap_TokensVector___bool__, METH_O, NULL},
+	 { "TokensVector___len__", _wrap_TokensVector___len__, METH_O, NULL},
+	 { "TokensVector___getslice__", _wrap_TokensVector___getslice__, METH_VARARGS, NULL},
+	 { "TokensVector___setslice__", _wrap_TokensVector___setslice__, METH_VARARGS, NULL},
+	 { "TokensVector___delslice__", _wrap_TokensVector___delslice__, METH_VARARGS, NULL},
+	 { "TokensVector___delitem__", _wrap_TokensVector___delitem__, METH_VARARGS, NULL},
+	 { "TokensVector___getitem__", _wrap_TokensVector___getitem__, METH_VARARGS, NULL},
+	 { "TokensVector___setitem__", _wrap_TokensVector___setitem__, METH_VARARGS, NULL},
+	 { "TokensVector_pop", _wrap_TokensVector_pop, METH_O, NULL},
+	 { "TokensVector_append", _wrap_TokensVector_append, METH_VARARGS, NULL},
+	 { "TokensVector_empty", _wrap_TokensVector_empty, METH_O, NULL},
+	 { "TokensVector_size", _wrap_TokensVector_size, METH_O, NULL},
+	 { "TokensVector_swap", _wrap_TokensVector_swap, METH_VARARGS, NULL},
+	 { "TokensVector_begin", _wrap_TokensVector_begin, METH_O, NULL},
+	 { "TokensVector_end", _wrap_TokensVector_end, METH_O, NULL},
+	 { "TokensVector_rbegin", _wrap_TokensVector_rbegin, METH_O, NULL},
+	 { "TokensVector_rend", _wrap_TokensVector_rend, METH_O, NULL},
+	 { "TokensVector_clear", _wrap_TokensVector_clear, METH_O, NULL},
+	 { "TokensVector_get_allocator", _wrap_TokensVector_get_allocator, METH_O, NULL},
+	 { "TokensVector_pop_back", _wrap_TokensVector_pop_back, METH_O, NULL},
+	 { "TokensVector_erase", _wrap_TokensVector_erase, METH_VARARGS, NULL},
+	 { "new_TokensVector", _wrap_new_TokensVector, METH_VARARGS, NULL},
+	 { "TokensVector_push_back", _wrap_TokensVector_push_back, METH_VARARGS, NULL},
+	 { "TokensVector_front", _wrap_TokensVector_front, METH_O, NULL},
+	 { "TokensVector_back", _wrap_TokensVector_back, METH_O, NULL},
+	 { "TokensVector_assign", _wrap_TokensVector_assign, METH_VARARGS, NULL},
+	 { "TokensVector_resize", _wrap_TokensVector_resize, METH_VARARGS, NULL},
+	 { "TokensVector_insert", _wrap_TokensVector_insert, METH_VARARGS, NULL},
+	 { "TokensVector_reserve", _wrap_TokensVector_reserve, METH_VARARGS, NULL},
+	 { "TokensVector_capacity", _wrap_TokensVector_capacity, METH_O, NULL},
+	 { "delete_TokensVector", _wrap_delete_TokensVector, METH_O, NULL},
+	 { "TokensVector_swigregister", TokensVector_swigregister, METH_O, NULL},
+	 { "TokensVector_swiginit", TokensVector_swiginit, METH_VARARGS, NULL},
 	 { "InstFreqNormSincExtractor_data_set", _wrap_InstFreqNormSincExtractor_data_set, METH_VARARGS, NULL},
 	 { "InstFreqNormSincExtractor_data_get", _wrap_InstFreqNormSincExtractor_data_get, METH_O, NULL},
 	 { "InstFreqNormSincExtractor_data_buffer_set", _wrap_InstFreqNormSincExtractor_data_buffer_set, METH_VARARGS, NULL},
@@ -9304,6 +12993,68 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_InstFreqNormSincExtractor", _wrap_delete_InstFreqNormSincExtractor, METH_O, NULL},
 	 { "InstFreqNormSincExtractor_swigregister", InstFreqNormSincExtractor_swigregister, METH_O, NULL},
 	 { "InstFreqNormSincExtractor_swiginit", InstFreqNormSincExtractor_swiginit, METH_VARARGS, NULL},
+	 { "Token_t_set", _wrap_Token_t_set, METH_VARARGS, NULL},
+	 { "Token_t_get", _wrap_Token_t_get, METH_O, NULL},
+	 { "Token_mode_num_set", _wrap_Token_mode_num_set, METH_VARARGS, NULL},
+	 { "Token_mode_num_get", _wrap_Token_mode_num_get, METH_O, NULL},
+	 { "Token_val_set", _wrap_Token_val_set, METH_VARARGS, NULL},
+	 { "Token_val_get", _wrap_Token_val_get, METH_O, NULL},
+	 { "Token_inst_freq_set", _wrap_Token_inst_freq_set, METH_VARARGS, NULL},
+	 { "Token_inst_freq_get", _wrap_Token_inst_freq_get, METH_O, NULL},
+	 { "Token_inst_ampl_set", _wrap_Token_inst_ampl_set, METH_VARARGS, NULL},
+	 { "Token_inst_ampl_get", _wrap_Token_inst_ampl_get, METH_O, NULL},
+	 { "Token_phase_set", _wrap_Token_phase_set, METH_VARARGS, NULL},
+	 { "Token_phase_get", _wrap_Token_phase_get, METH_O, NULL},
+	 { "new_Token", _wrap_new_Token, METH_NOARGS, NULL},
+	 { "delete_Token", _wrap_delete_Token, METH_O, NULL},
+	 { "Token_swigregister", Token_swigregister, METH_O, NULL},
+	 { "Token_swiginit", Token_swiginit, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_data_set", _wrap_InstFreqNormSincTokenizer_data_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_data_get", _wrap_InstFreqNormSincTokenizer_data_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_data_buffer_set", _wrap_InstFreqNormSincTokenizer_data_buffer_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_data_buffer_get", _wrap_InstFreqNormSincTokenizer_data_buffer_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_compute_buffer_set", _wrap_InstFreqNormSincTokenizer_compute_buffer_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_compute_buffer_get", _wrap_InstFreqNormSincTokenizer_compute_buffer_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_compute_buffer2_set", _wrap_InstFreqNormSincTokenizer_compute_buffer2_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_compute_buffer2_get", _wrap_InstFreqNormSincTokenizer_compute_buffer2_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_mode_set", _wrap_InstFreqNormSincTokenizer_mode_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_mode_get", _wrap_InstFreqNormSincTokenizer_mode_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_inst_freq_set", _wrap_InstFreqNormSincTokenizer_inst_freq_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_inst_freq_get", _wrap_InstFreqNormSincTokenizer_inst_freq_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_inst_ampl_set", _wrap_InstFreqNormSincTokenizer_inst_ampl_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_inst_ampl_get", _wrap_InstFreqNormSincTokenizer_inst_ampl_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_phase_set", _wrap_InstFreqNormSincTokenizer_phase_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_phase_get", _wrap_InstFreqNormSincTokenizer_phase_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_modes_count_set", _wrap_InstFreqNormSincTokenizer_modes_count_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_modes_count_get", _wrap_InstFreqNormSincTokenizer_modes_count_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_freq_conv_set", _wrap_InstFreqNormSincTokenizer_freq_conv_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_freq_conv_get", _wrap_InstFreqNormSincTokenizer_freq_conv_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_freq_conv_image_set", _wrap_InstFreqNormSincTokenizer_freq_conv_image_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_freq_conv_image_get", _wrap_InstFreqNormSincTokenizer_freq_conv_image_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_tokens_set", _wrap_InstFreqNormSincTokenizer_tokens_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_tokens_get", _wrap_InstFreqNormSincTokenizer_tokens_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_period_muller_set", _wrap_InstFreqNormSincTokenizer_period_muller_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_period_muller_get", _wrap_InstFreqNormSincTokenizer_period_muller_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_locality_coeff_set", _wrap_InstFreqNormSincTokenizer_locality_coeff_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_locality_coeff_get", _wrap_InstFreqNormSincTokenizer_locality_coeff_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_integrator_set", _wrap_InstFreqNormSincTokenizer_integrator_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_integrator_get", _wrap_InstFreqNormSincTokenizer_integrator_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_derivator_set", _wrap_InstFreqNormSincTokenizer_derivator_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_derivator_get", _wrap_InstFreqNormSincTokenizer_derivator_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_phase_computer_simple_set", _wrap_InstFreqNormSincTokenizer_phase_computer_simple_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_phase_computer_simple_get", _wrap_InstFreqNormSincTokenizer_phase_computer_simple_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_inst_freq_computer_set", _wrap_InstFreqNormSincTokenizer_inst_freq_computer_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_inst_freq_computer_get", _wrap_InstFreqNormSincTokenizer_inst_freq_computer_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_inst_ampl_computer_set", _wrap_InstFreqNormSincTokenizer_inst_ampl_computer_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_inst_ampl_computer_get", _wrap_InstFreqNormSincTokenizer_inst_ampl_computer_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_filter_set", _wrap_InstFreqNormSincTokenizer_filter_set, METH_VARARGS, NULL},
+	 { "InstFreqNormSincTokenizer_filter_get", _wrap_InstFreqNormSincTokenizer_filter_get, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_getTokens", _wrap_InstFreqNormSincTokenizer_getTokens, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_computeVec", _wrap_InstFreqNormSincTokenizer_computeVec, METH_VARARGS, NULL},
+	 { "new_InstFreqNormSincTokenizer", _wrap_new_InstFreqNormSincTokenizer, METH_NOARGS, NULL},
+	 { "delete_InstFreqNormSincTokenizer", _wrap_delete_InstFreqNormSincTokenizer, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_swigregister", InstFreqNormSincTokenizer_swigregister, METH_O, NULL},
+	 { "InstFreqNormSincTokenizer_swiginit", InstFreqNormSincTokenizer_swiginit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -9314,21 +13065,25 @@ static swig_type_info _swigt__p_DERIVATORS__FinniteDifferenceT_DERIVATORS__Finni
 static swig_type_info _swigt__p_DataType = {"_p_DataType", "DataType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_FILTERS__NonOptPeriodBasedFilterT_double_FILTERS__FilteringType__AverageBased_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_FILTERS__InstFreqKind__Average_t = {"_p_FILTERS__NonOptPeriodBasedFilterT_double_FILTERS__FilteringType__AverageBased_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_FILTERS__InstFreqKind__Average_t", "FILTERS::NonOptPeriodBasedFilter< double,FILTERS::FilteringType::AverageBased,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,FILTERS::InstFreqKind::Average > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_FILTERS__SincResLocalFilterT_double_t = {"_p_FILTERS__SincResLocalFilterT_double_t", "FILTERS::SincResLocalFilter< double > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GenericSignalT_SimpleVecWrapperT_double_t_true_t = {"_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t", "NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor::DataType *|GenericSignal< SimpleVecWrapper< double >,true > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_GenericSignalT_SimpleVecWrapperT_double_t_true_t = {"_p_GenericSignalT_SimpleVecWrapperT_double_t_true_t", "NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor::DataType *|NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer::DataType *|GenericSignal< SimpleVecWrapper< double >,true > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_INST_AMPL_COMPUTERS__HilbertTransformBasedT_UTILITY_MATH__HTKind__Mull_t = {"_p_INST_AMPL_COMPUTERS__HilbertTransformBasedT_UTILITY_MATH__HTKind__Mull_t", "INST_AMPL_COMPUTERS::HilbertTransformBased< UTILITY_MATH::HTKind::Mull > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t = {"_p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t", "INST_FREQ_COMPUTERS::ComputedOnPhase< double,INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint >,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward >,INST_FREQ_COMPUTERS::InstFreqDerivativeBasedKind::TimeAverage > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t = {"_p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t", "INTEGRATORS::Riman< INTEGRATORS::PolygonType::ByPoint > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor = {"_p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor", "NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer = {"_p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer", "NP_DSP::ONE_D::Tokenizers::InstFreqNormSincTokenizer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t = {"_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t", "PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::DerArctg,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t = {"_p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t", "PHASE_COMPUTERS::ExtremumsBasedNonOpt< double,PHASE_COMPUTERS::ExtremumsKind::Simple,DERIVATORS::FinniteDifference< DERIVATORS::FinniteDifferenceType::Backward > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Token = {"_p_Token", "std::vector< Token >::value_type *|Token *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__allocatorT_Token_t = {"_p_std__allocatorT_Token_t", "std::vector< Token >::allocator_type *|std::allocator< Token > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_double_t = {"_p_std__allocatorT_double_t", "std::vector< double >::allocator_type *|std::allocator< double > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t = {"_p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t", "std::vector< NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor::DataType *,std::allocator< NP_DSP::ONE_D::MODES_EXTRACTORS::InstFreqNormSincExtractor::DataType * > > *|std::vector< GenericSignal< SimpleVecWrapper< double >,true > *,std::allocator< GenericSignal< SimpleVecWrapper< double >,true > * > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_Token_t = {"_p_std__vectorT_Token_t", "std::vector< Token,std::allocator< Token > > *|std::vector< Token > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_double_t = {"_p_std__vectorT_double_t", "std::vector< double,std::allocator< double > > *|std::vector< double > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
@@ -9343,16 +13098,20 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t,
   &_swigt__p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t,
   &_swigt__p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor,
+  &_swigt__p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer,
   &_swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t,
   &_swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t,
+  &_swigt__p_Token,
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_difference_type,
   &_swigt__p_p_PyObject,
   &_swigt__p_size_type,
+  &_swigt__p_std__allocatorT_Token_t,
   &_swigt__p_std__allocatorT_double_t,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t,
+  &_swigt__p_std__vectorT_Token_t,
   &_swigt__p_std__vectorT_double_t,
   &_swigt__p_swig__SwigPyIterator,
   &_swigt__p_value_type,
@@ -9367,16 +13126,20 @@ static swig_cast_info _swigc__p_INST_AMPL_COMPUTERS__HilbertTransformBasedT_UTIL
 static swig_cast_info _swigc__p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t[] = {  {&_swigt__p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t[] = {  {&_swigt__p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor[] = {  {&_swigt__p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer[] = {  {&_swigt__p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t[] = {  {&_swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t[] = {  {&_swigt__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Token[] = {  {&_swigt__p_Token, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__allocatorT_Token_t[] = {  {&_swigt__p_std__allocatorT_Token_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_double_t[] = {  {&_swigt__p_std__allocatorT_double_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t[] = {  {&_swigt__p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_Token_t[] = {  {&_swigt__p_std__vectorT_Token_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_double_t[] = {  {&_swigt__p_std__vectorT_double_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -9391,16 +13154,20 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_INST_FREQ_COMPUTERS__ComputedOnPhaseT_double_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_INST_FREQ_COMPUTERS__InstFreqDerivativeBasedKind__TimeAverage_t,
   _swigc__p_INTEGRATORS__RimanT_INTEGRATORS__PolygonType__ByPoint_t,
   _swigc__p_NP_DSP__ONE_D__MODES_EXTRACTORS__InstFreqNormSincExtractor,
+  _swigc__p_NP_DSP__ONE_D__Tokenizers__InstFreqNormSincTokenizer,
   _swigc__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__DerArctg_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t,
   _swigc__p_PHASE_COMPUTERS__ExtremumsBasedNonOptT_double_PHASE_COMPUTERS__ExtremumsKind__Simple_DERIVATORS__FinniteDifferenceT_DERIVATORS__FinniteDifferenceType__Backward_t_t,
+  _swigc__p_Token,
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_difference_type,
   _swigc__p_p_PyObject,
   _swigc__p_size_type,
+  _swigc__p_std__allocatorT_Token_t,
   _swigc__p_std__allocatorT_double_t,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__vectorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_std__allocatorT_GenericSignalT_SimpleVecWrapperT_double_t_true_t_p_t_t,
+  _swigc__p_std__vectorT_Token_t,
   _swigc__p_std__vectorT_double_t,
   _swigc__p_swig__SwigPyIterator,
   _swigc__p_value_type,
