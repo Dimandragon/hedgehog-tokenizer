@@ -3,29 +3,30 @@ import random
 
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 size = 500
 
-v = extractor.DoubleVector(size)
-for i in range(len(v)):
-    v[i] = random.random()
+v_first = extractor.DoubleVector(size)
+for i in range(len(v_first)):
+    v_first[i] = random.random() + (math.sin(i / 20.) + 0.5) + (math.cos(i / 7.) + 0.5) * 0.2
 
-for i in range(len(v)):
-    print(v[i])
+for i in range(len(v_first)):
+    print(v_first[i])
 
 my_extractor = extractor.InstFreqNormSincExtractor()
-my_extractor.locality_coeff = 5
-my_extractor.period_muller = 1.05
-
-my_extractor.computeVec(data_in=v)
+my_extractor.locality_coeff = 3
+my_extractor.period_muller = 1.0
+my_extractor.resampling_type = my_extractor.ResamplingType_BackForSignalAfterIter
+my_extractor.computeVec(data_in=v_first)
 
 print(my_extractor.getDataSize(), my_extractor.getModesCount())
 
 x = np.linspace(0, my_extractor.getDataSize()-1,my_extractor.getDataSize())
 print(x.shape)
 ploting_data = []
-for i in range(500):
-    ploting_data.append(v[i])
+for i in range(len(v_first)):
+    ploting_data.append(v_first[i])
 plt.plot(x, ploting_data)
 plt.show()
 
@@ -41,6 +42,15 @@ for i in range(my_extractor.getModesCount()):
         ploting_data.append(v[j])
     plt.plot(x, ploting_data)
     plt.show()
+
+    for j in range(len(v_first)):
+        v_first[j] = v_first[j] - v[j]
+
+    ploting_data = []
+    for j in range(len(v_first)):
+        ploting_data.append(v_first[j])
+    #plt.plot(x, ploting_data)
+    #plt.show()
 
 
 '''
