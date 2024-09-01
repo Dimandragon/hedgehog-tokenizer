@@ -11,13 +11,10 @@ v_first = extractor.DoubleVector(size)
 for i in range(len(v_first)):
     v_first[i] = random.random() + (math.sin(i / 20.) + 0.5) + (math.cos(i / 7.) + 0.5) * 0.2
 
-for i in range(len(v_first)):
-    print(v_first[i])
-
-my_extractor = extractor.InstFreqNormSincExtractor()
-my_extractor.locality_coeff = 3
-my_extractor.period_muller = 1.0
-my_extractor.resampling_type = my_extractor.ResamplingType_BackForSignalAfterIter
+my_extractor = extractor.InstFreqNormSincExtractorReq()
+my_extractor.locality_coeff = 5
+my_extractor.period_muller = 1.05
+my_extractor.max_iter_number_for_filter = 3
 my_extractor.computeVec(data_in=v_first)
 
 print(my_extractor.getDataSize(), my_extractor.getModesCount())
@@ -49,8 +46,8 @@ for i in range(my_extractor.getModesCount()):
     ploting_data = []
     for j in range(len(v_first)):
         ploting_data.append(v_first[j])
-    #plt.plot(x, ploting_data)
-    #plt.show()
+    plt.plot(x, ploting_data)
+    plt.show()
 
 
 '''

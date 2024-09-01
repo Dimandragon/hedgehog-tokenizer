@@ -31,9 +31,11 @@ namespace NP_DSP{
     namespace ONE_D{
         namespace MODES_EXTRACTORS{
             %template(computeVec) InstFreqNormSincExtractor::compute<std::vector<double>>;
+            %template(computeVec) InstFreqNormSincExtractorReq::compute<std::vector<double>>;
         }
         namespace Tokenizers{
             %template(computeVec) InstFreqNormSincTokenizer::compute<std::vector<double>>;
+            %template(computeVec) InstFreqNormSincReqTokenizer::compute<std::vector<double>>;
         }
     }
 }
