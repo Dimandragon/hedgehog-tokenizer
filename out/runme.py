@@ -50,9 +50,6 @@ for i in range(my_extractor.getModesCount()):
     #plt.show()
 
 
-
-
-
 tokenizer = extractor.InstFreqNormSincReqTokenizer()
 tokenizer.locality_coeff = 5
 tokenizer.period_muller = 1.1
