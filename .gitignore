@@ -10,5 +10,6 @@ out/*.cpp
 out/*.cc 
 out/extractor.py 
 out/*.so 
-
-
+clangd-trace.json
+build_tokenizer.ipynb
+.vscode
