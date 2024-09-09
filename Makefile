@@ -2,8 +2,8 @@ fetch-deps:
 	git submodule update --remote --recursive --init
 
 clean: fetch-deps
-	rm -R build;
-	rm -R .xmake;
+	rm -R -f build;
+	rm -R -f .xmake;
 
 build-linux-x86_64:
 	xmake clean; xmake;
