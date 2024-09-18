@@ -52,7 +52,7 @@ for i in range(my_extractor.getModesCount()):
 
 tokenizer = extractor.InstFreqNormSincReqTokenizer()
 tokenizer.locality_coeff = 5
-tokenizer.period_muller = 1.1
+tokenizer.period_muller = 1.2
 tokenizer.max_iter_number_for_filter = 3
 
 v = extractor.DoubleVector(size)
@@ -65,6 +65,10 @@ tokens = tokenizer.getTokens()
 for token in tokens:
     print(token.mode_num, token.t, token.val, 
           token.inst_freq, token.inst_ampl, token.phase)
+
+print("complete decomposition")
+
+print("start testing tokens count by 1000 iters")
 
 count = len(tokenizer.getTokens())
 for i in range(0, 1000):
