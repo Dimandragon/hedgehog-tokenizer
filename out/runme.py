@@ -19,10 +19,13 @@ for i in range(len(v_first)):
 plt.plot(x, ploting_data)
 plt.show()
 
-my_extractor = extractor.InstFreqNormSincExtractorReq()
-my_extractor.locality_coeff = 5
-my_extractor.period_muller = 1.1
-my_extractor.max_iter_number_for_filter = 3
+phase_shifts = extractor.DoubleVector()
+for i in range (0, 100):
+    phase_shifts.append(i * 0.01 * math.pi)
+
+my_extractor = extractor.MakimaBasedModeDecomposition()
+my_extractor.max_iter_number_for_filter = 10
+my_extractor.phase_shifts = phase_shifts
 my_extractor.computeVec(data_in=v_first)
 
 print(my_extractor.getDataSize(), my_extractor.getModesCount())
@@ -50,10 +53,9 @@ for i in range(my_extractor.getModesCount()):
     #plt.show()
 
 
-tokenizer = extractor.InstFreqNormSincReqTokenizer()
-tokenizer.locality_coeff = 5
-tokenizer.period_muller = 1.2
-tokenizer.max_iter_number_for_filter = 3
+tokenizer = extractor.MakimaModeDecompositionBasedTokenizer()
+tokenizer.max_iter_number_for_filter = 10
+tokenizer.phase_shifts = phase_shifts
 
 v = extractor.DoubleVector(size)
 for i in range(len(v)):
