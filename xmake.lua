@@ -19,8 +19,10 @@ add_requires("python 3.x")
 
 
 target("extractor")
+    set_kind("shared")
     add_rules("swig.cpp", {moduletype = "python"})
     add_files("src/extractor.i", {scriptdir = "share"})
     add_packages("python")
+    add_deps("alglib")
     add_deps("non-parametric_dsp")
 

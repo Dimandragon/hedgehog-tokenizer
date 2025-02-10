@@ -20,12 +20,15 @@ plt.plot(x, ploting_data)
 plt.show()
 
 phase_shifts = extractor.DoubleVector()
-for i in range (0, 100):
-    phase_shifts.append(i * 0.01 * math.pi)
+for i in range (0, 10):
+    phase_shifts.append(i * 0.1 * math.pi)
 
-my_extractor = extractor.MakimaBasedModeDecomposition()
+my_extractor = extractor.SOTAEMD()
 my_extractor.max_iter_number_for_filter = 10
 my_extractor.phase_shifts = phase_shifts
+my_extractor.oversampling_ratio_for_ft_der = 10.0
+my_extractor.extremums_rotation_kind_e = extractor.RotateKind_NaiveFTFracDir
+my_extractor.interpolation_kind_e = extractor.InterpolationKind_RBFTPS
 my_extractor.computeVec(data_in=v_first)
 
 print(my_extractor.getDataSize(), my_extractor.getModesCount())
@@ -53,9 +56,12 @@ for i in range(my_extractor.getModesCount()):
     #plt.show()
 
 
-tokenizer = extractor.MakimaModeDecompositionBasedTokenizer()
+tokenizer = extractor.SOTAEMDBasedTokenizer()
 tokenizer.max_iter_number_for_filter = 10
 tokenizer.phase_shifts = phase_shifts
+tokenizer.oversampling_ratio_for_ft_der = 10.0
+tokenizer.extremums_rotation_kind_e = extractor.RotateKind_NaiveFTFracDir
+tokenizer.interpolation_kind_e = extractor.InterpolationKind_RBFTPS
 
 v = extractor.DoubleVector(size)
 for i in range(len(v)):
@@ -74,6 +80,7 @@ print("start testing tokens count by 1000 iters")
 
 count = len(tokenizer.getTokens())
 for i in range(0, 1000):
+    print(i)
     v = extractor.DoubleVector(size)
     for j in range(len(v)):
         v[j] = random.random()

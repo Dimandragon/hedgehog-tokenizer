@@ -38,7 +38,7 @@ to install dependencies in colab you canrun following commands
 !curl -fsSL https://xmake.io/shget.text | bash
 ```
 ## Run example
-To run example you can just run out/runme.py after building
+To run example you can just run generated setenv.sh via ```source setenv.sh``` and run out/runme.py after building
 ## Using
 After project building to use bindings you can import out/extractor.py file from your script without extracting it from the out directory
-Also you can copy out directory to your project
+Also you can copy out directory to your project and modify generated setenv.sh for new out location
