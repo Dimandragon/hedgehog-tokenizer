@@ -24,7 +24,7 @@ for i in range (0, 10):
     phase_shifts.append(i * 0.1 * math.pi)
 
 my_extractor = extractor.SOTAEMD()
-my_extractor.max_iter_number_for_filter = 10
+my_extractor.max_iter_number_for_filter = 1
 my_extractor.phase_shifts = phase_shifts
 my_extractor.oversampling_ratio_for_ft_der = 10.0
 my_extractor.extremums_rotation_kind_e = extractor.RotateKind_NaiveFTFracDir
@@ -57,7 +57,7 @@ for i in range(my_extractor.getModesCount()):
 
 
 tokenizer = extractor.SOTAEMDBasedTokenizer()
-tokenizer.max_iter_number_for_filter = 10
+tokenizer.max_iter_number_for_filter = 1
 tokenizer.phase_shifts = phase_shifts
 tokenizer.oversampling_ratio_for_ft_der = 10.0
 tokenizer.extremums_rotation_kind_e = extractor.RotateKind_NaiveFTFracDir
